@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Card from "../../Components/Card"
+import ProductDetail from '../../Components/ProductDetail'
 import Layout from "../../Components/Layout"
 
 function Home() {
@@ -12,14 +13,15 @@ function Home() {
     }, [])
     return (
         <Layout>
-        Home 
-        <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
-        {
-        items?.map(item => (
-        <Card key={item.id} data={item} />
-        ))
-        }
-        </div>
+            Home 
+                <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
+                    {
+                    items?.map(item => (
+                    <Card key={item.id} data={item} />
+                    ))
+                    }
+                </div>
+        <ProductDetail />
         </Layout>
 )
 }
