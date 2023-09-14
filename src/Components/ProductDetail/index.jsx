@@ -6,7 +6,7 @@ import { ShoppingCartContext } from '../../Context'
 const ProductDetail = () => {
     const context = useContext(ShoppingCartContext)
 
-    const { images=[], title, price, description } = context.productToShow
+    const { images=[], title, } = context.productToShow
 
     return (
         <aside
