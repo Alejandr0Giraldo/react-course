@@ -4,7 +4,6 @@ import { XMarkIcon } from '@heroicons/react/24/solid'
 const OrderCard = props => {
 
     const { id, title, imageUrl, price, handleDelete } = props
-    console.log("Hello", props);
 
     return (
         <div className="flex justify-between items-center mb-3">
