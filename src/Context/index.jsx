@@ -60,7 +60,7 @@ export const ShoppingCartProvider = ({children}) => {
         }
 
         if (searchType === 'BY_TITLE_AND_CATEGORY') {
-            return filteredItemsByCategory(items, searchByCategory).filter(item => item.category.name.toLowerCase().includes(searchByCategory.toLowerCase()))
+            return filteredItemsByCategory(items, searchByCategory).filter(item => item.title.toLowerCase().includes(searchByTitle.toLowerCase()))
         }
 
         if (!searchType) {

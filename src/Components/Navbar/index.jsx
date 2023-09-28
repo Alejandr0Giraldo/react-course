@@ -7,7 +7,7 @@ const Navbar = () => {
     const context = useContext(ShoppingCartContext)
     const activeStyle = 'underline underline-offset-4'
     return (
-        <nav className='flex justify-between items-center fixed z10 top-0 w-full py-5 px-8 text-sm font-light'>
+        <nav className='flex justify-between items-center bg-white fixed z10 top-0 w-full py-5 px-8 text-sm font-light'>
             <ul className='flex items-center gap-3'>
             <li className='font-semibold text-lg'>
                     <NavLink to='/' >
@@ -46,12 +46,12 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink
-                        to='/furnitures'
-                        onClick={() => context.setSearchByCategory('furnitures')}
+                        to='/furniture'
+                        onClick={() => context.setSearchByCategory('furniture')}
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>
-                        Furnitures
+                        Furniture
                     </NavLink>
                 </li>
                 <li>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </li>
                 <li className='flex items-center'>
                     <ShoppingCartIcon className='h-6 2-6 text-black'></ShoppingCartIcon>
-                    <div>{context.count}</div>
+                    <div>{context.cartProducts.length}</div>
                 </li>
             </ul>
         </nav>
